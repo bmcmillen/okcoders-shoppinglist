@@ -7,12 +7,12 @@
   </head>
   <body>
     <h1><center>Eat more chocolate!</center></h1>
-    <div id="list"></div>
+    <div id="listContainer"></div>
   </body>
   <script>
-    $.get('/list', function(res) {
+    $.get('/listItems', function(res) {
       console.log('list = ', res);
-      $('#list').text(res.join (' | ')); Set the text of #list to the items Array
+      $('#listContainer').text(res.join (' | '));  //Set the text of #list to the items Array
     });
   </script>
 </html>

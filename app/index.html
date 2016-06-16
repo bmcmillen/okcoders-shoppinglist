@@ -8,11 +8,16 @@
   <body>
     <h1><center>Eat more chocolate!</center></h1>
     <div id="listContainer"></div>
+    <div id="weaponsContainer"></div>
   </body>
   <script>
     $.get('/listItems', function(res) {
       console.log('list = ', res);
-      $('#listContainer').text(res.join (' | '));  //Set the text of #list to the items Array
+      $('#listContainer').text(res.join (' | '));  //Set the text of #listContainer to the items Array
+    });
+    $.get('/thingsThatGoBang', function(res) {
+      console.log('guns = ', res);
+      $('#weaponsContainer').text(res.join (' | '));  //Set the text of #thingsThatGoBang to the items Array
     });
   </script>
 </html>

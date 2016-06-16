@@ -12,3 +12,7 @@ app.use('/', express.static('./app'));   // Serve our static HTML files
 app.get('/listItems', function(req,res) {
   res.json([1,2,3]);
 });
+
+app.get('/thingsThatGoBang', function(req,res) {
+  res.json(["Glock","AR-15","OMG! It's an Apache Gunship!"]);
+});
